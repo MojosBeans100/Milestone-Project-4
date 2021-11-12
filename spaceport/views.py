@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import PipelineList
+from .forms import CreatePipeline
 
 # Create your views here.
 def homepage(request):
@@ -30,3 +31,13 @@ def list_pipelines(request):
     }
 
     return render(request,'user_home.html', context)
+
+def create_pipeline(request):
+    
+    form = CreatePipeline()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'create_pipeline.html', context)

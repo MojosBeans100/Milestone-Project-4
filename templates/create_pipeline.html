@@ -1,0 +1,12 @@
+{% extends "homepage.html" %}
+
+{% block title %}
+<title>Create Pipeline</title>
+{% endblock title %}
+
+{% block content %}
+<form>
+    {% csrf_token %}
+    {{ form.as_p }}
+</form>
+{% endblock content %}
