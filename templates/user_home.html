@@ -4,4 +4,36 @@
 
 <h1>My Pipelines</h1>
 
+<h2>Active Pipelines</h2>
+{% for pipeline in active_list %}
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 300px;">
+            <img src="#" alt="image">
+            <div class="card-body">
+                <h4 class="card-title">{{ pipeline.pipeline_name }}</h4>
+                <p class="card-text">{{ pipeline.pipeline_des }}</p>
+                <a href="#" class="btn btn-primary">See Pipeline</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<h2>Complete Pipelines</h2>
+{% for pipeline in complete_list %}
+<div class="container">
+    <div class="row">
+        <div class="card" style="width: 300px;">
+            <img src="#" alt="image">
+            <div class="card-body">
+                <h4 class="card-title">{{ pipeline.pipeline_name }}</h4>
+                <p class="card-text">{{ pipeline.pipeline_des }}</p>
+                <a href="#" class="btn btn-primary">See Pipeline</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
 {% endblock content %}
