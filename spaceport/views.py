@@ -14,3 +14,11 @@ def models_temp(request):
 
     print(context)
     return render(request, 'models_temp.html', context)
+
+def list_pipelines(request):
+
+    user = str(request.user)
+
+    print(user)
+
+    return render(request,'user_home.html')
