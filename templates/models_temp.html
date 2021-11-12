@@ -1,0 +1,47 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<h1>Pipeline List</h1>
+
+<table>
+    <!-- column titles -->
+    <tr>
+        <th>id (primary key)</th>
+        <th>name</th>
+        <th>des</th>
+        <th>created by</th>
+        <th>created at</th>
+        <th>start date</th>
+        <th>end date</th>
+    </tr>
+
+    <!-- for model in models -->
+    {% for pipeline in list %}
+    <tr>
+        <td>{{ pipeline.pipeline_id }}</td>
+        <td>{{ pipeline.pipeline_name }}</td>
+        <td>{{ pipeline.pipeline_des }}</td>
+        <td>{{ pipeline.created_by }}</td>
+        <td>{{ pipeline.date_created }}</td>
+        <td>{{ pipeline.start_date }}</td>
+        <td>{{ pipeline.end_date }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
