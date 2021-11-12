@@ -1,1 +1,1 @@
-web: gunicorn ms4.wsgi
+web: gunicorn spaceport.wsgi
