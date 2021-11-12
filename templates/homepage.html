@@ -11,12 +11,21 @@
 
 <body>
     <nav>
+        {% if user.is_authenticated %}
         <a href='/admin'>Admin</a>
         <a href='models_temp.html'>Models (temp)</a>
         <a href='user_home.html'>List Pipelines</a>
+        <a href='{% url "account_logout" %}'>Log out</a>
+        {% else %}
+        <a href='/admin'>Admin</a>
+        <a href='models_temp.html'>Models (temp)</a>
+        <a href='{% url "account_login" %}'>Log in</a>
+        {% endif %}
     </nav>
 
+    {% block content %}
     <h1>Homepage</h1>
+    {% endblock content %}
 
 </body>
 
