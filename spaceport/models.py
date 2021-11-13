@@ -19,6 +19,14 @@ class PipelineList(models.Model):
         ('bimonthly', 'Bimonthly'),
     )
 
+    # output image choice
+    output_image = (
+        ('true-colour', 'True Colour Image'),
+        ('false-colour-urban', 'False Colour Urban'),
+        ('false-colour-infrared', 'False Colour Infrared'),
+        ('near-infrared', 'Near Infrared'),
+    )
+
     # auto generated
     pipeline_id     = models.IntegerField(primary_key=True)
     created_by      = models.CharField(max_length=50)
@@ -31,6 +39,7 @@ class PipelineList(models.Model):
     aoi             = models.JSONField()
     start_date      = models.DateTimeField()
     end_date        = models.DateTimeField()
-    interval        = models.CharField(choices=interval, max_length=12)
+    interval        = models.CharField(choices=interval, max_length=12, null=True)
+    output_image    = models.CharField(choices=output_image, max_length=50, null=True)
 
 
