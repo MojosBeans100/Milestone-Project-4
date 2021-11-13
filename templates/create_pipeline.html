@@ -5,8 +5,55 @@
 {% endblock title %}
 
 {% block content %}
+<h1>Create Pipeline</h1>
+
+<div class="container">
+    <div class="col" style="border: solid black 1px">
+        <form class="form-horizontal p-3">
+
+            <h2>General Information</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">Pipeline Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="My first pipeline">
+            </div>
+
+            <div class="mb-3">
+                <label for="des" class="form-label">Description:</label>
+                <textarea class="form-control" id="des" rows="3" placeholder="Glasgow Aug 21 - Dec 21"></textarea>
+            </div>
+
+            <h2>Area of Interest</h2>
+
+            <div class="form-check form-check-inline"" >
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Upload GeoJSON
+                </label>
+              </div>
+
+              <div class="form-check form-check-inline"">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                 Select on map
+                </label>
+              </div>
+
+            <div class="mb-3">
+                <label for="aoi" class="form-label">AOI:</label>
+                <textarea class="form-control" id="aoi" rows="3" placeholder="Must be in JSON format"></textarea>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!-- 
 <form>
     {% csrf_token %}
     {{ form.as_p }}
-</form>
+</form> -->
 {% endblock content %}
