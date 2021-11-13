@@ -9,7 +9,8 @@ class CreatePipeline(ModelForm):
             'pipeline_des',
             'aoi',
             'start_date',
-            'end_date'
+            'end_date',
+            'interval',
             ]
 
         widgets = {

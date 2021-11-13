@@ -10,6 +10,15 @@ class PipelineList(models.Model):
         ('in_progress', 'In Progress'),
     )
 
+    # interval choice for results from pipeline
+    interval = (
+        ('daily', 'Daily'),
+        ('weekly', 'Weekly'),
+        ('biweekly', 'Biweekly'),
+        ('monthly', 'Monthly'),
+        ('bimonthly', 'Bimonthly'),
+    )
+
     # auto generated
     pipeline_id     = models.IntegerField(primary_key=True)
     created_by      = models.CharField(max_length=50)
@@ -22,5 +31,6 @@ class PipelineList(models.Model):
     aoi             = models.JSONField()
     start_date      = models.DateTimeField()
     end_date        = models.DateTimeField()
+    interval        = models.CharField(choices=interval, max_length=12)
 
 
