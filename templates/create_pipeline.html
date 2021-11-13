@@ -11,7 +11,7 @@
     <div class="col" style="border: solid black 1px">
         <form class="form-horizontal p-3">
 
-            <h2>General Information</h2>
+            <h2 style="background-color: rgb(180, 180, 180);">General Information</h2>
             <div class="mb-3">
                 <label for="name" class="form-label">Pipeline Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="My first pipeline">
@@ -22,7 +22,7 @@
                 <textarea class="form-control" id="des" rows="3" placeholder="Glasgow Aug 21 - Dec 21"></textarea>
             </div>
 
-            <h2>Area of Interest</h2>
+            <h2 style="background-color: rgb(180, 180, 180);">Area of Interest</h2>
 
             <div class="form-check form-check-inline">
                 <input onchange="aoi_choice();" class=" form-check-input" type="radio" name="aoi_select" id="upload_geojson">
@@ -39,15 +39,12 @@
             </div>
 
             <div class="mb-3" id="aoi_input">
-                <!-- <label for="aoi" class="form-label">AOI:</label>
-                <textarea class="form-control" id="aoi" rows="3" placeholder="Must be in JSON format"></textarea> -->
-                
             </div>
 
             <p>Output area = </p>
             <p>Output location = </p>
 
-            <h2>Interval</h2>
+            <h2 style="background-color: rgb(180, 180, 180);">Interval</h2>
             <div class="mb-3">
                 <label for="start_date" class="form-label">Start Date:</label>
                 <input type="date" class="form-control" id="start_date"></textarea>
@@ -66,7 +63,7 @@
                 <option value="4">Bimonthly</option>
             </select>
 
-            <p>Your pipeline will start on the *date* and finish on the *date*, delivering images every *time*</p>
+            <p><small>Your pipeline will start on the *date* and finish on the *date*, delivering images every *time*</small></p>
 
             <!-- <button onclick="aoi_choice();" type="button">PRESS ME</button> -->
 
