@@ -1,4 +1,4 @@
-from django.forms import ModelForm, DateInput, TextInput, Textarea, Select
+from django.forms import ModelForm, DateInput, TextInput, Textarea, RadioSelect, Select
 from .models import PipelineList
 
 class CreatePipeline(ModelForm):
@@ -32,6 +32,7 @@ class CreatePipeline(ModelForm):
 
         widgets = {
             'pipeline_name': TextInput(attrs={
+                'required': True,
                 'class': 'form-control',
                 'placeholder': 'eg. My First Pipeline',
                 'id': 'pipeline_name',
@@ -56,7 +57,7 @@ class CreatePipeline(ModelForm):
                 'class': 'form-select',
                 'id': 'interval',
             }),
-            'output_image': Select(choices='output_image',attrs={
-                'class': 'form-select',
+            'output_image': RadioSelect(choices='output_image',attrs={
+                # 'class': 'form-select',
             })
         }

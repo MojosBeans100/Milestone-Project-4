@@ -1,3 +1,5 @@
+
+// to swap between text field and map on radio selection
 function aoi_choice() {
 
     upload_geojson = document.getElementById("upload_geojson").checked
@@ -31,7 +33,4 @@ function aoi_choice() {
 
 }
 
-function hello() {
 
-    console.log(hello)
-}
