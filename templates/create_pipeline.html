@@ -55,17 +55,24 @@
                 {{form.end_date}}
             </div>
 
-            <!-- <select class="form-select" aria-label="Default select example">
-                <option selected disabled>Choose a tasking interval</option>
-                <option value="1">Weekly</option>
-                <option value="2">Biweekly</option>
-                <option value="3">Monthly</option>
-                <option value="4">Bimonthly</option>
-            </select> -->
-            {{form.interval}}
+            <div class="mb-3">
+                <label for="interval" class="form-label">Interval:</label>
+                {{form.interval}}
+            </div>
+
+            
 
             <p><small>Your pipeline will start on the *date* and finish on the *date*, delivering images every *time*</small></p>
-               -->
+            
+            <h2 style="background-color: rgb(180, 180, 180);">Parameters</h2>
+
+
+            <h2 style="background-color: rgb(180, 180, 180);">Output Type</h2>
+            {{form.output_image}}
+
+
+            <!-- should be submit when ready -->
+            <button class="btn btn-secondary" type="button">Review</button>
 
         </form>
     </div>

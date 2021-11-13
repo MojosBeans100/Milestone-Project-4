@@ -36,6 +36,14 @@ def create_pipeline(request):
     
     form = CreatePipeline()
 
+    # auto
+    # pipeline_id = last pipeline id + 1  
+    # created_by  = current authenticated user   
+    # date_created  = now (think this is handled)
+    # status    = active when creating   
+    # resolution = low (for now until working on cost)
+
+
     context = {
         'form': form
     }

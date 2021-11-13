@@ -54,6 +54,7 @@ class CreatePipeline(ModelForm):
             }),
             'interval': Select(choices='interval',attrs={
                 'class': 'form-select',
+                'id': 'interval',
             }),
             'output_image': Select(choices='output_image',attrs={
                 'class': 'form-select',

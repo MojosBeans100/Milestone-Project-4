@@ -32,6 +32,7 @@ class PipelineList(models.Model):
     created_by      = models.CharField(max_length=50)
     date_created    = models.DateTimeField(auto_now=True)
     status          = models.CharField(choices=status_choices, max_length=20)
+    resolution      = models.CharField(null=True, max_length=10)
 
     # user form
     pipeline_name   = models.CharField(max_length=30)
