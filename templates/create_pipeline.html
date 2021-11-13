@@ -17,12 +17,12 @@
                 {{form.pipeline_name}}
             </div>
 
-            <!-- <div class="mb-3">
+            <div class="mb-3">
                 <label for="des" class="form-label">Description:</label>
-                <textarea class="form-control" id="des" rows="3" placeholder="Glasgow Aug 21 - Dec 21"></textarea>
+                {{form.pipeline_des}}
             </div>
 
-            <h2 style="background-color: rgb(180, 180, 180);">Area of Interest</h2>
+            <!-- <h2 style="background-color: rgb(180, 180, 180);">Area of Interest</h2>
 
             <div class="form-check form-check-inline">
                 <input onchange="aoi_choice();" class=" form-check-input" type="radio" name="aoi_select" id="upload_geojson">
@@ -31,7 +31,7 @@
                 </label>
             </div>
 
-            <div class="form-check form-check-inline">
+             <div class="form-check form-check-inline">
                 <input onchange="aoi_choice();" class=" form-check-input" type="radio" name="aoi_select" id="select_map">
                 <label class="form-check-label" for="select_map">
                     Select on map
@@ -39,20 +39,20 @@
             </div>
 
             <div class="mb-3" id="aoi_input">
-            </div>
+            </div> -->
 
-            <p>Output area = </p>
-            <p>Output location = </p>
+            <!-- <p>Output area = </p>
+            <p>Output location = </p> -->
 
             <h2 style="background-color: rgb(180, 180, 180);">Interval</h2>
             <div class="mb-3">
                 <label for="start_date" class="form-label">Start Date:</label>
-                <input type="date" class="form-control" id="start_date"></textarea>
+                {{form.start_date}}
             </div>
 
             <div class="mb-3">
                 <label for="end_date" class="form-label">End Date:</label>
-                <input type="date" class="form-control" id="end_date"></textarea>
+                {{form.end_date}}
             </div>
 
             <select class="form-select" aria-label="Default select example">
@@ -64,7 +64,7 @@
             </select>
 
             <p><small>Your pipeline will start on the *date* and finish on the *date*, delivering images every *time*</small></p>
-             -->
+               -->
 
         </form>
     </div>
