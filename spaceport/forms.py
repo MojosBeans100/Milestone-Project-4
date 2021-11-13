@@ -1,4 +1,4 @@
-from django.forms import ModelForm, DateInput
+from django.forms import ModelForm, DateInput, TextInput
 from .models import PipelineList
 
 class CreatePipeline(ModelForm):
@@ -11,3 +11,10 @@ class CreatePipeline(ModelForm):
             'start_date',
             'end_date'
             ]
+
+        widgets = {
+            'pipeline_name': TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'eg. My First Pipeline'
+            })
+        }
