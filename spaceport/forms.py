@@ -53,11 +53,11 @@ class CreatePipeline(ModelForm):
                 'class': 'form-control',
                 'id': 'end_date',
             }),
-            'interval': Select(choices='interval',attrs={
+            'interval': Select(choices='interval', attrs={
                 'class': 'form-select',
                 'id': 'interval',
             }),
-            'output_image': RadioSelect(choices='output_image',attrs={
+            'output_image': RadioSelect(choices='output_image', attrs={
                 # 'class': 'form-select',
             })
         }

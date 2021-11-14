@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('accounts/', include('allauth.urls')),
     path('models_temp.html', views.models_temp, name='models_temp'),
+    path('how_to.html', views.how_to, name='how_to'),
     path('user_home.html', views.list_pipelines, name='list_pipelines'),
     path('create_pipeline.html', views.create_pipeline, name='create_pipeline')
 ]

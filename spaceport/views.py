@@ -6,6 +6,9 @@ from .forms import CreatePipeline
 def homepage(request):
     return render(request, 'homepage.html')
 
+def how_to(request):
+    return render(request, 'how_to.html')
+
 def models_temp(request):
 
     context = {
